@@ -13,7 +13,7 @@ WORKDIR /opt/tomcat/webapps
 LABEL app=Dockerapp
 COPY target/*.war /usr/local/tomcat/webapps/myweb.war
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
-cd /usr/local/tomcat/ 
-mv webapps webapps2
-mv webapps.dist/ webapps
-cp /usr/local/tomcat/webapps2/myweb.war . 
+RUN cd /usr/local/tomcat/
+RUN mv webapps webapps2
+RUN mv webapps.dist/ webapps
+RUN cp /usr/local/tomcat/webapps2/myweb.war . 
