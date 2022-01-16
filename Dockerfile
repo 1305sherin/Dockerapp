@@ -17,3 +17,4 @@ RUN cd /usr/local/tomcat/
 RUN mv webapps webapps2
 RUN mv webapps.dist/ webapps
 RUN cp /usr/local/tomcat/webapps2/myweb.war . 
+
